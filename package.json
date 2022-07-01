@@ -4,7 +4,7 @@
   "description": "architect mailer component",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test/*.test.js"
+    "test": "find test -type f -iname '*.test.js' | xargs nyc --reporter=lcov --reporter=text mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/bimedia-fr/architect-mailer#readme",
   "dependencies": {
     "nodemailer": "^6.7.6"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0"
   }
 }

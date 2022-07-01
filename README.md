@@ -21,7 +21,9 @@ npm install --save architect-mailer
     port: 25,
   },
   mail: {
-    from : 'noreply@example.com',
+    config1: {
+        from : 'noreply@example.com',
+    }
   }
 }
 ```
@@ -53,9 +55,8 @@ module.exports = function setup(options, imports, register) {
     var mailer = imports.mailer;
 
     // send mail
-    mailer.sendMail({
+    mailer.config1.sendMail({
         to: 'someone@example.com',
-        from: 'noreply@example.com',
         subject: 'this the mail subject',
         html: '<p>html message</p>'
     }).then(() => {
@@ -72,5 +73,5 @@ module.exports.consumes=['mailer'];
 
 ### Options
 * tansport : see [nodemailer smtp](https://nodemailer.com/smtp/) or [nodemailer other transports](https://nodemailer.com/transports/)
-* mail : see nodemailer [message configuration](https://nodemailer.com/message/)
+* mail : a hash of configurations see nodemailer [message configuration](https://nodemailer.com/message/)
 * throttle: add a delay in ms when mail is sent to prevent flooding transport. (default: 0)
