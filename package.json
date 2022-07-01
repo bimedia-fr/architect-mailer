@@ -1,0 +1,26 @@
+{
+  "name": "architect-mailer",
+  "version": "1.0.0",
+  "description": "architect mailer component",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bimedia-fr/architect-mailer.git"
+  },
+  "keywords": [
+    "architect",
+    "mailer"
+  ],
+  "author": "jerome creignou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bimedia-fr/architect-mailer/issues"
+  },
+  "homepage": "https://github.com/bimedia-fr/architect-mailer#readme",
+  "dependencies": {
+    "nodemailer": "^6.7.6"
+  }
+}
