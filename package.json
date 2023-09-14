@@ -1,6 +1,6 @@
 {
   "name": "architect-mailer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "architect mailer component",
   "main": "lib/index.js",
   "scripts": {
